@@ -1,0 +1,24 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    ["babel-plugin-styled-components", { "ssr": true }],
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "@src": "./src",
+          "@pages": "./pages",
+          "@modules": "./modules",
+          "@redux": "./redux",
+          "@styles": "./styles",
+          "@utils": "./utils",
+          "@component": "./component",
+          "@node_modules": "./node_modules"
+        },
+        "extensions": [".js", ".jsx"]
+      }
+    ]
+  ]
+
+}

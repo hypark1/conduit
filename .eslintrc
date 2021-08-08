@@ -1,0 +1,70 @@
+{
+  "root": true,
+  "parser": "bable-eslint",
+  "env" : {
+    "node" : true,
+    "es6" : true
+  },
+  "plugins": ["prettier", "babel", "prettier", "airbnb-base", "eslint:recommended"],
+  "extends": ["next", "next/core-web-vitals"],
+  "rules": {
+    "import/no-unresolved": "off",
+    "import/default": "off",
+    "import/export": "off",
+    "import/extensions": "off",
+    "import/prefer-default-export": "off",
+    "import/no-default-export": "off",
+    "comma-dangle": ["error", "never"],
+    "comma-spacing": [
+      1,
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "object-curly-spacing": ["error", "never"],
+    "object-curly-newline": 0,
+    "no-console": [
+      "error",
+      {
+        "allow": ["info", "warn", "error"]
+      }
+    ],
+    "no-param-reassign": 0,
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "CallExpression[callee.object.name='console'][callee.property.name!=/^(log|warn|error|info|trace)$/]",
+        "message": "Unexpected property on console object was called"
+      }
+    ],
+    "no-shadow": "off",
+    "wrap-iife": ["error", "any"],
+    "no-default-export": 0,
+    "prefer-destructuring": ["error", {"object": true, "array": false}],
+    "max-len": [2, {"code": 180, "tabWidth": 2, "ignoreUrls": true}]
+  }
+},
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+    "@src/*": ["./src/*"]
+  }
+},
+"exclude": ["node_modules"],
+"include": ["**/*.js", "**/*.jsx"]
+}

@@ -1,0 +1,249 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1.title {
+  margin: 50px;
+  text-align: center;
+}
+
+.button {
+  margin-top: 15px;
+}
+
+form {
+  .MuiFormControl-root {
+    margin-bottom: 20px;
+  }
+  .MuiButton-root {
+    padding: 15px 0;
+  }
+}
+
+nav {
+  .MuiPagination-ul {
+    justify-content: center;
+    margin: 30px;
+  }
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  resize: none;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  border-radius: 4px;
+}
+
+.textBox {
+  display: flex;
+  margin: 30px 0;
+}
+
+.profileImg {
+  border-radius: 50%;
+}
+
+.tableTitle {
+  cursor: pointer;
+
+  &:hover {
+    background: lightblue;
+  }
+}
+
+.description {
+  color: gray;
+}
+
+.listTitle {
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+
+.headerBox {
+  text-align: right;
+  padding: 25px;
+  border-bottom: 1px solid darkgray;
+
+  button {
+    margin: 10px;
+  }
+}
+
+.centerBox {
+  text-align: center;
+
+  img {
+    margin-bottom: 20px;
+  }
+
+  h4, h5 {
+    margin: 10px 0;
+  }
+}
+
+.tapBox.MuiPaper-elevation1 {
+  box-shadow: none;
+  border-bottom: 1px solid darkgray;
+
+}
+
+.articleTop {
+  background: lightgray;
+  padding: 50px 0;
+
+  .titleText {
+    margin-bottom: 40px;
+
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+    .userText {
+      margin-left: 15px;
+    }
+  }
+
+}
+
+.articleListBox {
+  position: relative;
+  padding: 30px 20px;
+  border-bottom: 1px solid lightgray;
+
+  h5 {
+    margin-bottom: 10px;
+  }
+  .user {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+
+    img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+    .userText {
+      margin-right: 10px;
+    }
+  }
+
+  .listChip {
+    position: absolute;
+    top: 30px;
+    right: 0;
+  }
+}
+
+.articleFeedWrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 20px;
+  column-gap: 20px;
+
+  .articleFeedBox {
+    border: 1px solid lightgray;
+    padding: 20px;
+    
+    .user {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+
+      img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+      }
+      .userText {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.articleBody {
+  padding: 50px 0;
+
+  .textBox {
+    margin-top: 50px;
+
+    button {
+      margin-right: 10px;
+    }
+  }
+
+  .commentBox {
+    display: flex;
+    padding: 40px 0;
+    margin-top: 40px;
+    border-top: 1px solid lightgray;
+
+    textarea {
+      flex: 11;
+    }
+    button {
+      flex: 1;
+    }
+  }
+}
+
+.commentList {
+  margin-bottom: 20px;
+
+  .user {
+    display: flex;
+    align-items: center;
+
+    .profileImg {
+      width: 35px;
+      height: 35px;
+      margin-right: 10px;
+    }
+    .userText {
+      h6 {
+        line-height: 1.4
+      }
+    }
+  }
+  .commentBody {
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .articleFeedWrap {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .articleFeedWrap {
+    grid-template-columns: 1fr;
+  }
+}
